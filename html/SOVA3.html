@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Office Voice Assistant</title>
+    <link rel="shortcut icon" href="../images/SO_logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="../css/app2.css"/>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="row header">
+            <div class="col-2">
+                <img src="../images/SO_logo.jpg" width="90" height="90" alt="logo" class="center-image">
+            </div>
+            <div class="col-10">
+                <h1>SOVA</h1>
+                <h5>Smart Office Voice Assistant</h5>
+            </div>
+        </div>
+        <div class="row block-0">
+            <h6>SOVA is a Front end for demonstration of work of Voice Assistant. Main functions are represented in
+                graphical way to show how Smart Office Eco system would work. Full processing is done on the back
+                end and can be easily implemented on VM inside telecom structure</h6>
+        </div>
+        <div class="row block-0">
+            <div class="col-4">
+                <div class="row block-title">
+                    <div class="col">
+                        <h1>Lighting systems</h1>
+                    </div>
+                </div>
+                <div class="row block-body">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col block-1">
+                                <div class="row block-name-1">
+                                    <div class="col">
+                                        <h3>Light</h3>
+                                    </div>
+                                </div>
+                                <div class="row block-body-1">
+                                    <div class="col-5">
+                                        <img src="../images/Light.png" width="90" height="90" alt="logo"
+                                             class="center-image">
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <label>
+                                                <label class="switch">
+                                                    <input id="light_switch" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                off/on
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <label>Color<input type="text" id="light_color"></label>
+                                        </div>
+
+                                        <div class="row">
+                                            <label>Brightness<input type="text" id="light_brightness"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col block-1">
+                                <div class="row block-name-1">
+                                    <div class="col">
+                                        <h3>Curtains</h3>
+                                    </div>
+                                </div>
+                                <div class="row block-body-1">
+                                    <div class="col-5">
+                                        <img src="../images/Curtains.png" width="90" height="90" alt="logo"
+                                             class="center-image">
+                                    </div>
+                                    <div class="col-7 block-info">
+                                        <div class="row">
+                                            <label>
+                                                <label class="switch">
+                                                    <input type="checkbox" id="curtain_switch">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                closed/opened
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row block-title">
+                    <div class="col">
+                        <h1>Air systems</h1>
+                    </div>
+                </div>
+                <div class="row block-body">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col block-1">
+                                <div class="row block-name-1">
+                                    <div class="col">
+                                        <h3>Air conditioning</h3>
+                                    </div>
+                                </div>
+                                <div class="row block-body-1">
+                                    <div class="col-5">
+                                        <img src="../images/Conditioning.png" width="90" height="90" alt="logo"
+                                             class="img-center">
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <label>
+                                                <label class="switch">
+                                                    <input type="checkbox" id="cond_switch">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                off/on
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <label>Temperature in celcius<input type="text" id="cond_temp"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col block-1">
+                                <div class="row block-name-1">
+                                    <div class="col">
+                                        <h3>Air quality sensor</h3>
+                                    </div>
+                                </div>
+                                <div class="row block-body-1">
+                                    <div class="col-5">
+                                        <img src="../images/Air.png" width="90" height="90" alt="logo"
+                                             class="img-center">
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <label>Temperature in celcius<input type="text" id="air_temp"></label>
+                                        </div>
+                                        <div class="row">
+                                            <label>Humidity percentage<input type="text" id="air_hum"></label>
+                                        </div>
+                                        <div class="row">
+                                            <label>C02 percentage<input type="text" id="air_co2"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row block-title">
+                    <div class="col">
+                        <h1>Screen systems</h1>
+                    </div>
+                </div>
+                <div class="row block-body">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col block-1">
+                                <div class="row block-name-1">
+                                    <div class="col">
+                                        <h3>TV</h3>
+                                    </div>
+                                </div>
+                                <div class="row block-body-1">
+                                    <div class="col-5">
+                                        <img src="../images/TV.png" width="90" height="90" alt="logo"
+                                             class="img-center">
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <label>
+                                                <label class="switch">
+                                                    <input type="checkbox" id="tv_power_switch">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                off/on
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <label>
+                                                <label class="switch">
+                                                    <input type="checkbox" id="tv_mute_switch">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                muted/unmuted
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <label>Volume<input type="text" id="tv_volume"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<div class="row block-body">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col block-1">
+                                <div class="row block-name-1">
+                                    <div class="col">
+                                        <h3>Outer conditions</h3>
+                                    </div>
+                                </div>
+                                <div class="row block-name-1">
+                                    <div class="col-6">
+                                        <div class="row block-name-1">
+                                            <div class="col">
+                                                <h4>Time</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row block-name-1">
+                                            <div class="col">
+                                                <label id="cur_time"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ <div class="row recordRow">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <label id="client_text">Recognized text:</label>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row recordRow">
+            <div class="col-5"></div>
+            <div class="col-2">
+                <button id="startRecord"></button>
+            </div>
+            <div class="col-5"></div>
+        </div>
+        <div class="row recordRow">
+            <div class="col-5"></div>
+            <div class="col-2">
+                <audio id=recordedAudio></audio>
+            </div>
+            <div class="col-5"></div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+<script src="../js/SOVA2.js"></script>
+</body>
+</html>
